@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes en HTML</title>
+</head>
+<body>
+
+    <h2>Etiqueta <a> para enlaces</h2>
+    <a href="https://ejemplo.com" target="_blank">Visitar Ejemplo.com</a>
+
+    <h2>Etiqueta <img> para insertar imágenes</h2>
+    <img src="images.jpg" alt="Descripción de la imagen" width="300" height="200">
+
+    <h2>Etiqueta <figure> con leyenda</h2>
+    <figure>
+        <img src="images.jpg" alt="Descripción">
+        <figcaption>Leyenda de la imagen</figcaption>
+    </figure>
+
+    <h2>Etiqueta <picture> para imágenes responsivas</h2>
+    <picture>
+        <source media="(min-width: 800px)" srcset="images.jpg">
+        <img src="images.jpg" alt="Imagen alternativa">
+    </picture>
+
+</body>
+</html>
