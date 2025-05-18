@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML &amp; CSS: Curso práctico avanzado</title>
+    <style>
+        /*Ponerle la fuente arial a todo el textoy añadirle una sangria*/
+        * {font-family: Arial, Helvetica, sans-serif; text-indent: 50px;}
+        /*Poner los enlaces en naranja*/
+        a {color: #cc3300}
+        /*Dentro de la id primero los parrafos, poner el color azul claro*/
+        #primero p {color: #4876a3}
+        /*Subrayar con un amarillo claro, poner azul oscuro y en negrita la cursiva que esta dentro del id primero*/
+        #primero em {font-weight: bold;color: #0c0cbc; background-color: lightgoldenrodyellow;}
+        /*Ponerle el color gris al texto en el id segundo*/
+        #segundo {color: #5b5b5b}
+        /*Ponerle color de fondo negro y color amarillo a la clase especial*/
+        .especial {background-color: black; color: yellow}
+        /*Poner en negrita los span*/
+        span {font-weight: bold}
+    </style>
+</head>
+
+<body>
+<div id="primero">
+  <h1>
+    <a href="http://publicacionesaltaria.com/es/tienda/112-html-css-curso-practico.html">
+      HTML &amp; CSS: Curso práctico avanzado
+    </a>
+  </h1>
+
+  <p>
+    Aunque los inicios de <a href="https://es.wikipedia.org/wiki/Internet">Internet</a> se remontan a los años
+    sesenta, no ha sido hasta los años noventa cuando, gracias a la Web, se ha extendido su uso por todo el mundo.
+    En pocos años, la Web ha evolucionado enormemente: se ha pasado de páginas sencillas, con pocas imágenes y contenidos
+    estáticos que eran visitadas por unos pocos usuarios a
+    <em>páginas complejas, con contenidos dinámicos que provienen de bases de datos y que son visitadas por miles
+    de usuarios al mismo tiempo</em>.
+  </p>
+</div>
+
+<div id="segundo" class="normal">
+  <p>
+    Todas las páginas están internamente construidas con la misma tecnología, con el
+    <em class="especial">Lenguaje de marcas de hipertexto</em> (
+    <span>Hypertext Markup Language</span>, <a href="https://es.wikipedia.org/wiki/HTML">HTML</a>)
+    y con las <em class="especial">Hojas de estilo en cascada</em> (
+    <span>Cascading Style Sheets</span>, <a href="https://es.wikipedia.org/wiki/CSS">CSS</a>).
+  </p>
+
+  <p>
+    Este libro es <em>adecuado para cualquiera que tenga interés en aprender a desarrollar sus propias páginas
+    web</em>. No son necesarios conocimientos previos para aprender con este libro, lo único que es necesario es
+    saber utilizar un ordenador y saber navegar por la Web.
+  </p>
+</div>
+
+</body>
+</html>
