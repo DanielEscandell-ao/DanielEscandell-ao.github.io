@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  background-color: #f0f0f0;
+}
+.indice {
+  color: white;
+  background-color: #333333;
+  padding: 8px;
+}
+.indice a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+h1 {
+  color: #005577;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.inicio-div {
+  background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.imagenes img {
+    margin: 10px;
+    border: 2px solid #555;
+    width: 200px;
+    height: auto;
+}
