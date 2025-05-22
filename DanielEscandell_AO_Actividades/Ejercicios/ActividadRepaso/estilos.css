@@ -15,7 +15,6 @@ body {
 }
 h1 {
   color: #005577;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .inicio-div {
   background-color: #ffffff;
@@ -23,8 +22,15 @@ h1 {
     border: 1px solid #ccc;
 }
 .imagenes img {
-    margin: 10px;
-    border: 2px solid #555;
+    margin: 15px;
+    border: 3px solid #555;
     width: 200px;
     height: auto;
+}
+table, th, td {
+  border-collapse: collapse;
+  width: 60%;
+  background-color: white;
+  border: 1px solid;
+  padding: 10px;
 }
