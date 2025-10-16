@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fernando Alonso</title>
+    <style>
+      * {
+        font-family: sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        color: goldenrod;
+        text-align: center;
+      }
+
+      .nano {
+        font-weight: bolder;
+        color: goldenrod;
+      }
+
+      #lista {
+        color: green;
+        font-size: larger;
+      }
+      .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .columna {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .columna img,
+      .columna iframe {
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+      iframe {
+        width: 100%;
+        max-width: 560px;
+        height: 315px;
+      }
+
+      .ultimo {
+        color: goldenrod;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fernando Alonso "El Nano"</h1>
+
+    <div class="contenedor">
+      <div class="columna">
+        <p class="nano">
+          Es un piloto de Fórmula 1 que nació en Oviedo el 29 de julio de 1981.
+        </p>
+        <img
+          src="https://images.ecestaticos.com/AvojPemi8v1ZDzCzyMugmFsxAdo=/0x0:2272x1507/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F56a%2F190%2Fd50%2F56a190d504231d57b9c8abeb7a1ffcb8.jpg"
+          alt="Alonso celebrando"
+        />
+      </div>
+
+      <div class="columna">
+        <div id="lista">
+          <h2>Última carrera</h2>
+          <ol>
+            <li>G. Rusell</li>
+            <li>M. Verstappen</li>
+            <li>L. Norris</li>
+            <li>O. Piastri</li>
+            <li>K. Antonelli</li>
+            <li>C. Leclerc</li>
+            <li class="nano">F. Alonso</li>
+            <li>L. Hamilton</li>
+            <li>O. Bearman</li>
+            <li>C. Sainz Jr</li>
+          </ol>
+        </div>
+        <iframe
+          src="https://www.youtube.com/embed/gJyB51pnSL8"
+          title="YouTube video player"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <h1 class="ultimo">Simplemente El Nano</h1>
+  </body>
+</html>
