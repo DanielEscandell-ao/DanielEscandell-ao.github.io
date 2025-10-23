@@ -2,7 +2,23 @@
     colspan: 3 ;
     text-align: center;
 }
-a {
+a:link {
     color: peru;
+    text-decoration: none;
+}
+a:visited {
+    color: violet;
+    text-decoration: none;
+}
+a:focus {
+    color: red;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+a:active {
+    color: purple;
     text-decoration: none;
 }
