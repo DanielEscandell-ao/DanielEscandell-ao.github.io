@@ -1,0 +1,79 @@
+:root{
+  --fondo: #f7f8fb;
+  --tarjeta: #ffffff;
+  --acento: #1f6feb;
+  --texto: #0f1724;
+  --suave: #64748b;
+  --radio: 12px;
+  --anchomax: 900px;
+  --relleno: 22px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--fondo),#eef2ff);
+  color:var(--texto);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.contenedor{
+  max-width:var(--anchomax);
+  margin:32px auto;
+  padding:calc(var(--relleno));
+}
+
+.cabecera{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--tarjeta);
+  padding:18px;
+  border-radius:var(--radio);
+  box-shadow:0 6px 18px rgba(15,23,36,0.06);
+}
+
+.nombre{
+  font-size:1.6rem;
+  font-weight:700;
+}
+
+.contacto{display:flex;gap:14px;align-items:center}
+.dato-contacto{font-size:0.95rem;color:var(--suave)}
+.contacto a{color:var(--acento);text-decoration:none}
+
+.seccion{
+  margin-top:18px;
+  background:var(--tarjeta);
+  padding:18px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(15,23,36,0.04);
+}
+
+.seccion h2{
+  margin:0 0 10px 0;
+  font-size:1.05rem;
+  color:var(--texto);
+}
+
+.seccion ul{margin:0;padding-left:18px}
+.seccion li{margin-bottom:10px}
+.fecha{display:block;color:var(--suave);font-size:0.9rem}
+
+.resumen p{margin:0}
+
+.pie{margin-top:14px;text-align:center;color:var(--suave);font-size:0.85rem}
+
+@media (max-width:640px){
+  .cabecera{flex-direction:column;align-items:flex-start;gap:10px}
+  .contacto{flex-direction:column;align-items:flex-start}
+  .contenedor{padding:14px}
+}
+
+@media print{
+  body{background:white}
+  .cabecera,.seccion{box-shadow:none}
+}
