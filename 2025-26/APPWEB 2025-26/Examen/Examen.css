@@ -1,0 +1,63 @@
+body {
+  background-color: aliceblue;
+  font-family: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+.menu {
+  color: black;
+  font-weight: bold;
+  background-color: rgb(45, 154, 226);
+  padding: 8px;
+  border: 1px solid black;
+  box-shadow: 0 6px 18px rgba(15, 23, 36, 0.06);
+}
+.menu a {
+  color: black;
+  text-decoration: none;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.piepagina {
+  color: black;
+  font-weight: bold;
+  background-color: rgb(45, 154, 226);
+  padding: 8px;
+  border: 1px solid black;
+  box-shadow: 0 6px 18px rgba(15, 23, 36, 0.06);
+}
+.piepagina a {
+  color: black;
+  text-decoration: none;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+h2 {
+  color: black;
+}
+li {
+  color: black;
+}
+ol {
+  margin-bottom: 525px;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: purple;
+  text-decoration: none;
+}
+a:focus {
+  color: red;
+  text-decoration: none;
+}
+a:hover {
+  color: darkgreen;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:active {
+  color: purple;
+  text-decoration: none;
+}
