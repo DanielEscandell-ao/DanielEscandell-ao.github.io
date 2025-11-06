@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de registro</title>
+    <link rel="stylesheet" href="Tasca 1.10.css">
+  </head>
+  <body>
+    <h1>Formulario de registro</h1>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="name" required><br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" class="apellidos" required><br>
+        <label for="sexo">Sexo:</label>
+        <input type="radio" name="gender" id="hombre" required>
+        <label for="hombre">Hombre</label>
+        <input type="radio" name="gender" id="mujer" required>
+        <label for="mujer">Mujer</label><br>
+        <label for="correo">Correo:</label>
+        <input type="email" required><br>
+        <input type="checkbox" name="novedades" id="novedades" required>
+        <label for="novedades">Deseo recibir información sobre novedades y ofertas</label><br>
+        <input type="checkbox" name="leido" id="leido" required>
+        <label for="leido">Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label><br>
+        <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
