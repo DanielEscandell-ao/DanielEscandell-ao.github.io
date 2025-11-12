@@ -84,3 +84,20 @@ input[type="submit"]:hover,
 button:hover {
   background-color: #006e7d;
 }
+
+input[type="reset"],
+button {
+  background-color: #595e5fff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+input[type="reset"]:hover,
+button:hover {
+  background-color: #292d2eff;
+}

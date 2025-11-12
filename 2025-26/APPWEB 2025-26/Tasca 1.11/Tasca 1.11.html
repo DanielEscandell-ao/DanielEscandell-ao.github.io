@@ -13,16 +13,16 @@
             <div class="nombre">
                 <label for="Nombreyapellidos" class="titulos">Nombre y apellidos</label>
                 <label for="*" class="ast">*</label><br>
-                <input type="text" class="basic-input" placeholder="Nombre"><br>
-                <input type="text" class="basic-input" placeholder="Primer Apellido"><br>
-                <input type="text" class="basic-input" placeholder="Segundo Apellido"><br>
+                <input type="text" class="basic-input" placeholder="Nombre" required><br>
+                <input type="text" class="basic-input" placeholder="Primer Apellido" required><br>
+                <input type="text" class="basic-input" placeholder="Segundo Apellido" required><br>
             </div>
             <div class="direccion">
                 <label for="Direccion" class="titulos">Dirección</label>
                 <label for="*" class="ast">*</label><br>
-                <input type="text" class="basic-input" placeholder="Calle, número, piso, puerta"><br>
-                <input type="text" class="basic-input" placeholder="Código postal"> <br>
-                <input type="text" class="basic-input" placeholder="Municipio"><br>
+                <input type="text" class="basic-input" placeholder="Calle, número, piso, puerta" required><br>
+                <input type="text" class="basic-input" placeholder="Código postal" required> <br>
+                <input type="text" class="basic-input" placeholder="Municipio" required><br>
                 <select name="Provincia" id="lista">
                     <option value=""></option>
                     <option value="Santjordi">Sant Jordi</option>
@@ -39,16 +39,19 @@
             <div class="email">
                 <label for="Email" class="titulos">Email</label>
                 <label for="*" class="ast">*</label><br>
-                <input type="text" class="basic-input" placeholder="Email">
+                <input type="text" class="basic-input" placeholder="Email" required>
             </div>
             <div class="telefono">
                 <label for="Telefono" class="titulos">Teléfono</label>
                 <label for="*" class="ast">*</label><br>
-                <input type="text" class="basic-input" placeholder="Fijo">
-                <input type="text" class="basic-input" placeholder="Móvil">
+                <input type="text" class="basic-input" placeholder="Fijo" required>
+                <input type="text" class="basic-input" placeholder="Móvil" required>
             </div>
             <div>
                 <input type="submit" value="Enviar">
+            </div>
+            <div>
+                <input type="reset" value="Limpiar">
             </div>
         </fieldset>
     </form>
