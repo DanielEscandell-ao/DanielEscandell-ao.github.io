@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="Tasca 1.12.css" />
+  </head>
+  <body>
+    <div class="links">
+      <div>
+        <a href="Tasca 1.12.inicio.html">Inicio</a>
+      </div>
+      <div>
+        <a href="Tasca 1.12.html">Pedir Pizza</a>
+      </div>
+    </div>
+    <h1>Pedido de pizza</h1>
+    <form action="#">
+      <fieldset>
+        <legend>La pizza</legend>
+        <label for="Ingredientes" class="titulo">Ingredientes</label><br />
+        <input type="checkbox" name="queso" id="Ingredientes" />
+        <label for="queso">Queso</label><br />
+        <input type="checkbox" name="Pepperoni" id="Ingredientes" />
+        <label for="Pepperoni">Pepperoni</label><br />
+        <input type="checkbox" name="Jamon" id="Ingredientes" />
+        <label for="Jamon">Jamón</label><br />
+        <label for="tamaño" class="titulo">Tamaño</label><br />
+        <input type="radio" name="tamaño" id="pequeña" required />
+        <label for="pequeña">Pequeña</label><br />
+        <input type="radio" name="tamaño" id="mediana" required />
+        <label for="mediana">Mediana</label><br />
+        <input type="radio" name="tamaño" id="grande" required />
+        <label for="grande">Grande</label><br />
+      </fieldset>
+      <fieldset>
+        <legend>Datos de entrega</legend>
+        <label for="nombre">Nombre</label>
+        <input type="text" required /><br />
+        <label for="Direccion">Dirección</label>
+        <input type="text" required /><br />
+        <label for="Telefono">Teléfono</label>
+        <input type="text" required /><br />
+        <label for="instrucciones especiales" class="titulo"
+          >Instrucciones especiales</label
+        ><br />
+        <textarea name="instrucciones" id="instrucciones"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Método de pago</legend>
+        <select name="metodo" id="metodo" required>
+          <option value="Tarjeta">Tarjeta</option>
+          <option value="Efectivo">Efectivo</option>
+        </select>
+      </fieldset>
+      <input type="submit" value="Ok" />
+    </form>
+  </body>
+</html>
