@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <link rel="stylesheet" href="CSS/examen2.css">
+</head>
+<body>
+    <div class="cabecera">
+        <header>
+            <h1>Realiza tu Pedido Personalizado</h1>
+            <h3>Selecciona tus preferencias para completas tu pedido.</h3>
+        </header>
+        <nav class="links">
+            <a href="examen2.html">Inicio</a>
+            <a href="#">Formalizar reserva</a>
+        </nav>
+    </div>
+    <div class="imagenes">
+        <div>
+            <img src="Imagenes/libro1.jpg" alt="Programacion">
+            <h4>Libro 1</h4>
+        </div>
+        <div>
+            <img src="Imagenes/libro2.jpg" alt="Python">
+            <h4>Libro 2</h4>
+        </div>
+        <div>
+            <img src="Imagenes/libro3.jpg" alt="Java">
+            <h4>Libro 3</h4>
+        </div>
+    </div>
+    <form action="#">
+        <fieldset>
+            <label for="nombre">Nombre:</label><br>
+            <input type="text"><br>
+            <label for="producto">Producto</label><br>
+            <select name="producto" id="producto">
+                <option value="#">Selecciona un producto</option>
+                <option value="Libro 1">Libro 1</option>
+                <option value="Libro 2">Libro 2</option>
+                <option value="Libro 3">Libro 3</option>
+            </select><br>
+            <label for="tamaño">Tamaño</label><br>
+            <input type="radio" name="tamaño" id="pequeño">
+            <label for="pequeño">Pequeño</label>
+            <input type="radio" name="tamaño" id="mediano">
+            <label for="mediano">Mediano</label>
+            <input type="radio" name="tamaño" id="grande">
+            <label for="grande">Grande</label><br>
+            <label for="Extras">Extras:</label><br>
+            <input type="checkbox" name="extras" id="web">
+            <label for="web">Web</label>
+            <input type="checkbox" name="extras" id="aplicaciones">
+            <label for="aplicaciones">Aplicaciones</label>
+            <input type="checkbox" name="extras" id="ecommerce">
+            <label for="ecommerce">Ecommerce</label><br>
+            <label for="comentarios">Comentarios adicionales:</label><br>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br>
+            <input type="submit" value="Enviar Pedido">
+        </fieldset>
+    </form>
+    <div>
+        <footer class="piedepagina">
+            <a href="#">Aviso legal</a> <a href="#">Cookies</a>
+        </footer>
+    </div>
+</body>
+</html>

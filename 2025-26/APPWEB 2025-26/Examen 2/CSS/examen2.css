@@ -1,0 +1,101 @@
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #ddddddff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cabecera {
+    background-color: #0476cb;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    margin: 10px;
+}
+.links a {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.links nav {
+  margin: 0 1.5rem;
+}
+.links a:hover {
+    color: #cb0404ff;
+}
+img {
+    width: 250px;
+    border-radius: 12px;
+}
+.imagenes {
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+}
+.imagenes div {
+    margin: 0 1.5rem;
+}
+.imagenes div h4{
+    text-align: center;
+}
+fieldset {
+    background-color: white;
+    border-radius: 12px;
+    border: none;
+    width: 50%;
+}
+input[type="submit"] {
+    width: 100%;
+    background-color: #0476cb;
+}
+input[type="submit"]:hover {
+    background-color: #cb0404ff;
+}
+form {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+input[type="text"] {
+    width: 100%;
+}
+select{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+}
+.piedepagina {
+    background-color: #0476cb;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 20px;
+}
+.piedepagina a {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.piedepagina a:hover {
+    color: #cb0404ff;
+}
