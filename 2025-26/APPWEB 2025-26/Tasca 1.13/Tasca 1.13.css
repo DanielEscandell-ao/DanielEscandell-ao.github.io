@@ -1,0 +1,97 @@
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #ddddddff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cabecera {
+    background-color: #cb0404ff;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    margin: 10px;
+}
+.links a {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.links nav {
+  margin: 0 1.5rem;
+}
+.links a:hover {
+    color: #0476cb;
+}
+.productos {
+    text-align: center;
+    font-size: 1.2rem;
+}
+img {
+    width: 250px;
+    border-radius: 12px;
+}
+.imagenes {
+    justify-content: center;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.imagenes div {
+    margin: 0 1.5rem;
+}
+.imagenes div h4{
+    text-align: center;
+}
+.descarga {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.descarga a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #cb0404ff;
+    background: #cb0404ff;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.piedepagina {
+    background-color: #cb0404ff;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 40px;
+    margin-top: 10px;
+    padding-top: 15px;
+}
+.piedepagina a {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.piedepagina a:hover {
+    color: #0476cb;
+}
