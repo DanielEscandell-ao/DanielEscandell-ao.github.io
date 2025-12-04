@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alerta()">Click me</button>
+    <script>
+      function alerta() {
+        let nombre = prompt("Introduce tu nombre: ");
+        if (nombre !== "") {
+          let ok = confirm(`¿Estas seguro de que te llamas ${nombre}?`);
+          if (ok) {
+            alert(`Bienvenido a mi pagina ${nombre}!`);
+          } else {
+            alert(
+              `Nos has confirmado que no eres ${nombre}. Repite el proceso.`
+            );
+            alerta();
+          }
+        } else{
+            alert("No has introducido un nombre, repite el proceso.")
+            alerta()
+        }
+      }
+    </script>
+  </body>
+</html>

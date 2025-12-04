@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Ingresa un número entre 18 y 99:</p>
+    <!-- Aquí, 'this' se refiere al propio elemento 'input' -->
+    <input type="number" name="age" size="3" onChange="validate(this, 18, 99);" />
+
+    <script>
+      function validate(obj, lowval, hival) {
+        // 'obj' es el objeto que recibe la función.
+        if (obj.value < lowval || obj.value > hival) {
+          console.log("¡Valor no válido!");
+        } else {
+            console.log("¡Valor valido!")
+        }
+      }
+    </script>
+  </body>
+</html>
