@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Saludo Personalizado</title>
+</head>
+
+<body onload="saludarUsuario()">
+
+    <h1>Ejercicio 2: Saludo Personalizado</h1>
+
+    <!-- Este párrafo está vacío al principio, pero lo llenaremos con JavaScript -->
+    <p id="mensajeBienvenida"></p>
+
+    <script>
+        // Esta función se ejecutará cuando el cuerpo (body) de la página se haya cargado
+        function saludarUsuario() {
+            // 1. Preguntamos el nombre al usuario y lo guardamos en una variable
+            const nombre = prompt("Por favor, introduce tu nombre:");
+
+            // 2. Buscamos el elemento HTML que tiene el id="mensajeBienvenida"
+            const parrafo = document.getElementById("mensajeBienvenida");
+
+            // 3. Cambiamos el texto de ese párrafo para mostrar el saludo personalizado
+            parrafo.innerText = `Hola, ${nombre}, ¡gracias por visitar nuestra web!`;
+            parrafo.style.color = 'grey';
+            parrafo.style.textAlign = 'center';
+        }
+    </script>
+
+</body>
+
+</html>
