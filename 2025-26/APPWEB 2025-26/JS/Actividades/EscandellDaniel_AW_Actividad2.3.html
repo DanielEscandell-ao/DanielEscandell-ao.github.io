@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validación de Formulario</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 400px;
+        margin: 40px auto;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      label {
+        font-weight: bold;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /* Transición suave para el cambio de color del borde */
+        transition: border-color 0.3s ease-in-out;
+      }
+      button {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      /* --- NUEVOS ESTILOS PARA VALIDACIÓN --- */
+
+      /* Estilo para el input cuando es INVÁLIDO */
+      .is-invalid {
+        border-color: red;
+      }
+
+      /* Estilo para el input cuando es VÁLIDO */
+      .is-valid {
+        border-color: green;
+      }
+
+      /* Estilo para los pequeños mensajes de error debajo de cada input */
+      .error-mensaje {
+        color: red;
+        font-size: 0.8em;
+        /* Estará oculto hasta que tenga texto */
+        min-height: 1.2em;
+      }
+
+      /* Estilo para el mensaje de éxito/error general */
+      #mensaje {
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario de Contacto</h1>
+
+    <form id="formulario" novalidate>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre" />
+      <!-- Contenedor para el error del nombre -->
+      <div class="error-mensaje" id="nombre-error"></div>
+
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" placeholder="Escribe tu correo" />
+      <!-- Contenedor para el error del correo -->
+      <div class="error-mensaje" id="correo-error"></div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensaje"></p>
+
+    <!-- Enlazamos nuestro archivo JavaScript al final del body -->
+    <script>
+    // Seleccionamos los elementos del formulario una sola vez al cargar la página, os dejo un ejemplo.
+      const formulario = document.getElementById("formulario");
+      const nombre = document.getElementById("nombre");
+      const correo = document.getElementById("correo");
+      const nombre_error = document.getElementById('nombre-error');
+      const correo_error = document.getElementById('correo-error');
+      const mensaje = document.getElementById('mensaje');
+
+      // Esta es una Expresión Regular (RegEx) para validar emails de forma sencilla.
+      // Busca un patrón de "caracteres@caracteres.caracteres"
+      const regexCorreo = /^\S+@\S+\.\S+$/;
+      const correoInput = document.getElementById("correo")
+      formulario.addEventListener("submit", function (event) {
+      // Evitamos el envío
+      event.preventDefault();
+      let esValido = true; // Usaremos esta variable para saber si el formulario es válido al final
+
+      // --- Reseteamos los estilos y mensajes antes de cada validación ---
+      nombre.classList.remove('is-valid', 'is-invalid');
+      correo.classList.remove('is-valid', 'is-invalid');
+      nombre_error.innerHTML = '';
+      correo_error.innerHTML = '';
+      mensaje.innerHTML = '';
+
+      // --- Validación del Campo Nombre ---
+      if (nombre.value !==''){
+        nombre.classList.add('is-valid')
+      // Si no hay error -> añade clase de éxito
+      }else {
+        // Si hay error -> añade clase de error
+        esValido = false;
+        nombre.classList.add('is-invalid')
+        nombre_error.innerHTML = 'Tienes que escribir un nombre.';
+      }
+      // Esto es lo mismo
+      // if (nombre.value ==''){
+      //  esValido = false;
+      //}
+
+      // --- Validación del Campo Correo --- Os dejo la función que devuelve True o False, para comprobar que el correo sea valido.
+      if(!regexCorreo.test(correo.value.trim())) {
+        esValido = false
+        correo.classList.add('is-invalid')
+        correo_error.innerHTML = 'Tienes que poner un correo valido.'
+      }else{
+        correo.classList.add('is-valid')
+      }
+      // Usamos .test() para ver si el valor del correo cumple con la RegEx
+
+
+      // --- Comprobación Final ---
+      if(esValido){
+        formulario.reset();
+        nombre.classList.remove('is-valid', 'is-invalid');
+        correo.classList.remove('is-valid', 'is-invalid');
+        mensaje.innerHTML = 'Formulario Enviado Correctamente.'
+      }
+      // Aquí podrías, por ejemplo, limpiar el formulario después de un envío exitoso
+      // y quitar las clases de validación
+      });
+    </script>
+  </body>
+</html>
