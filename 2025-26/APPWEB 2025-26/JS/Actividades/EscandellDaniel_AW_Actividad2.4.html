@@ -225,7 +225,6 @@
       // Vaciar todo el contenido
       // =========== SECCIÓN 4: Modificar Lista ===========
       // 1. Obtener valor del input
-      const nuevo_item = document.getElementById('nuevoItem')
       // 2. Validar que no esté vacío
       // 3. Buscar la lista
       // 4. Crear nuevo elemento de lista
@@ -233,6 +232,14 @@
       const emojis = ["🍎", "🍌", "🍊", "🍇", "🍓", "🍉", "🥭", "🍍"];
       const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)]; // 6. Añadir evento para eliminar al hacer doble clic
       // 7. Insertar en la lista
+      function agregarItem(){
+        const nuevo_item = document.getElementById('nuevoItem');
+        const lista = document.getElementById('listaElementos');
+        const nuevoli = document.createElement('li');
+        nuevoli.innerHTML = nuevo_item + emojiAleatorio;
+        lista.appendChild(nuevoli);
+      }
+      debugger
       // 8. Limpiar el input
       // Poner el cursor de nuevo en el input
       // =========== SECCIÓN 5: Cajas Interactivas ===========
