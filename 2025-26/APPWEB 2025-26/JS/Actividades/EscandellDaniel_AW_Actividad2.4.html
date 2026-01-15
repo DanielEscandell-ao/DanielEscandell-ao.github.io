@@ -155,108 +155,131 @@
     </div>
 
     <script>
-      // =========== SECCIÓN 1: Buscar por ID ===========
-      // 1. Buscar elemento por su ID
-      const textoejemplo = document.getElementById('textoEjemplo');
-      // 2. Verificar que existe
-      // 3. Cambiar su contenido
-      function cambiarTexto() {
-        textoejemplo.innerHTML = 'Texto modificado';
-        textoejemplo.style = 'font-weight: bold, color: red';
-      }
-      function restaurarTexto() {
-        textoejemplo.innerHTML = 'Este texto será modificado cuando hagas clic.';
-        textoejemplo.style = 'font-weight: 500, color: black';
-      }
-      // Quitar color
-      // Quitar negrita
-      // =========== SECCIÓN 2: Buscar por Clase ===========
-      // 1. Buscar TODOS los elementos con clase "ejemplo"
-      const ejemplo = document.querySelectorAll('.ejemplo');
-      const aejemplo = document.getElementsByClassName('ejemplo');
-      // 2. Recorrer la colección (no es un array, es HTMLCollection)
-      function cambiarColorClases(){
-        for(let i = 0; i < ejemplo.length; i++){
-            ejemplo[i].style = 'color: red';
-        }
-      }
-      function restaurarClases(){
-        for(let i = 0; i < ejemplo.length; i++){
-            ejemplo[i].style = 'color: blue';
-        }
-      }
-      // 3. Cambiar propiedades de cada elemento
-      // =========== SECCIÓN 3: Crear Divs con Colores Aleatorios ===========
-      const contenedorDivs = document.getElementById('contenedorDivs');
-      function generarColorAleatorio() {
-        // Generar un color hexadecimal aleatorio
-        const letras = "0123456789ABCDEF";
-        let color = "#";
-        for (let i = 0; i < 6; i++) {
-          color += letras[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      } // 1. Buscar el contenedor
-      // 2. Crear un nuevo elemento div
-      function crearDiv() {
-        const nuevo_div = document.createElement('div');
-        nuevo_div.textContent = 'Nuevo Div Creado';
-        nuevo_div.style.backgroundColor = generarColorAleatorio();
-        nuevo_div.style.color = 'white';
-        contenedorDivs.appendChild(nuevo_div);
-      }
-      function crear5Divs() {
-        for(i = 0; i < 5; i++){
-        const nuevo_div = document.createElement('div');
-        nuevo_div.textContent = 'Nuevo Div Creado';
-        nuevo_div.style.backgroundColor = generarColorAleatorio();
-        nuevo_div.style.color = 'white';
-        contenedorDivs.appendChild(nuevo_div);
-        }
-      }
-      function limpiarDivs() {
-        contenedorDivs.innerHTML = '';
-      }
-      // 3. Configurar propiedades del div
-      // 4. Asignar color aleatorio
-      // Texto blanco para mejor contraste
-      // 5. Añadir evento de clic
-      // 6. Insertar en el contenedor
-      // Vaciar todo el contenido
-      // =========== SECCIÓN 4: Modificar Lista ===========
-      // 1. Obtener valor del input
-      // 2. Validar que no esté vacío
-      // 3. Buscar la lista
-      // 4. Crear nuevo elemento de lista
-      // 5. Añadir emoji aleatorio
-      const emojis = ["🍎", "🍌", "🍊", "🍇", "🍓", "🍉", "🥭", "🍍"];
-      const emojiAleatorio = emojis[Math.floor(Math.random() * emojis.length)]; // 6. Añadir evento para eliminar al hacer doble clic
-      // 7. Insertar en la lista
-      function agregarItem(){
-        const nuevo_item = document.getElementById('nuevoItem');
-        const lista = document.getElementById('listaElementos');
-        const nuevoli = document.createElement('li');
-        nuevoli.innerHTML = nuevo_item + emojiAleatorio;
-        lista.appendChild(nuevoli);
-      }
-      debugger
-      // 8. Limpiar el input
-      // Poner el cursor de nuevo en el input
-      // =========== SECCIÓN 5: Cajas Interactivas ===========
-      // Cambiar colores de las 3 cajas
-      // Cambiar también el color del texto para que sea visible
-      // =========== EJERCICIOS ADICIONALES ===========
-      // PRÁCTICA: Cambiar el título principal (h1)
-      // 1. Buscar el elemento h1
-      // 2. Cambiar su texto a "¡DOM Manipulado!"
-      // 3. Cambiar su color a morado (#8A2BE2)
-      // PRÁCTICA: Contar cuántos divs hay en la página
-      // 1. Buscar todos los divs
-      // 2. Mostrar un alert con el número total
-      // PRÁCTICA: Crear un botón que alerte el texto de todos los párrafos
-      // 1. Buscar todos los párrafos (etiqueta <p>)
-      // 2. Recorrerlos y concatenar sus textos
-      // 3. Mostrar el resultado en un alert
+            // =========== SECCIÓN 1: Buscar por ID ===========
+            // 1. Buscar elemento por su ID
+            const textoejemplo = document.getElementById("textoEjemplo");
+            // 2. Verificar que existe
+            // 3. Cambiar su contenido
+            function cambiarTexto() {
+              textoejemplo.innerHTML = "Texto modificado";
+              textoejemplo.style = "font-weight: bold, color: red";
+            }
+            function restaurarTexto() {
+              textoejemplo.innerHTML =
+                "Este texto será modificado cuando hagas clic.";
+              textoejemplo.style = "font-weight: 500, color: black";
+            }
+            // Quitar color
+            // Quitar negrita
+            // =========== SECCIÓN 2: Buscar por Clase ===========
+            // 1. Buscar TODOS los elementos con clase "ejemplo"
+            const ejemplo = document.querySelectorAll(".ejemplo");
+            const aejemplo = document.getElementsByClassName("ejemplo");
+            // 2. Recorrer la colección (no es un array, es HTMLCollection)
+            function cambiarColorClases() {
+              for (let i = 0; i < ejemplo.length; i++) {
+                ejemplo[i].style = "color: red";
+              }
+            }
+            function restaurarClases() {
+              for (let i = 0; i < ejemplo.length; i++) {
+                ejemplo[i].style = "color: blue";
+              }
+            }
+            // 3. Cambiar propiedades de cada elemento
+            // =========== SECCIÓN 3: Crear Divs con Colores Aleatorios ===========
+            const contenedorDivs = document.getElementById("contenedorDivs");
+            function generarColorAleatorio() {
+              // Generar un color hexadecimal aleatorio
+              const letras = "0123456789ABCDEF";
+              let color = "#";
+              for (let i = 0; i < 6; i++) {
+                color += letras[Math.floor(Math.random() * 16)];
+              }
+              return color;
+            } // 1. Buscar el contenedor
+            // 2. Crear un nuevo elemento div
+            function crearDiv() {
+              const nuevo_div = document.createElement("div");
+              nuevo_div.textContent = "Nuevo Div Creado";
+              nuevo_div.style.backgroundColor = generarColorAleatorio();
+              nuevo_div.style.color = "white";
+              contenedorDivs.appendChild(nuevo_div);
+            }
+            function crear5Divs() {
+              for (i = 0; i < 5; i++) {
+                const nuevo_div = document.createElement("div");
+                nuevo_div.textContent = "Nuevo Div Creado";
+                nuevo_div.style.backgroundColor = generarColorAleatorio();
+                nuevo_div.style.color = "white";
+                contenedorDivs.appendChild(nuevo_div);
+              }
+            }
+            function limpiarDivs() {
+              contenedorDivs.innerHTML = "";
+            }
+            // 3. Configurar propiedades del div
+            // 4. Asignar color aleatorio
+            // Texto blanco para mejor contraste
+            // 5. Añadir evento de clic
+            // 6. Insertar en el contenedor
+            // Vaciar todo el contenido
+            // =========== SECCIÓN 4: Modificar Lista ===========
+            // 1. Obtener valor del input
+            // 2. Validar que no esté vacío
+            // 3. Buscar la lista
+            // 4. Crear nuevo elemento de lista
+            // 5. Añadir emoji aleatorio
+            // 7. Insertar en la lista
+            const lista = document.getElementById("listaElementos");
+            function agregarItem() {
+              const nuevo_item = document.getElementById("nuevoItem");
+              const emojis = ["🍎", "🍌", "🍊", "🍇", "🍓", "🍉", "🥭", "🍍"]; // 6. Añadir evento para eliminar al hacer doble clic
+              if (nuevo_item == "") {
+                alert("El elemento no puede estar vacio.");
+              } else {
+                const emojiAleatorio =
+                  emojis[Math.floor(Math.random() * emojis.length)];
+                const nuevoli = document.createElement("li");
+                nuevoli.textContent = nuevo_item.value + " " + emojiAleatorio;
+                lista.appendChild(nuevoli);
+                nuevo_item.value = ''
+              }
+            }
+            // 8. Limpiar el input
+            // Poner el cursor de nuevo en el input
+            function eliminarUltimo() {
+              const li = document.querySelectorAll('li');
+              let ultimo = li.length - 1;
+              lista.removeChild(li[ultimo])
+            }
+            // =========== SECCIÓN 5: Cajas Interactivas ===========
+            // Cambiar colores de las 3 cajas
+            function cambiarCajas(){
+              const caja = document.querySelectorAll('.caja');
+              for (let i = 0; i< caja.length; i++)
+              caja[i].style.backgroundColor = generarColorAleatorio();
+            }
+            // Cambiar también el color del texto para que sea visible
+            function esconderCajas(){
+              const caja = document.querySelectorAll('.caja');
+              for (let i = 0; i< caja.length; i++)
+              caja[i].addEventListener('mouseenter',() => {
+              caja[i].style.display = 'none'
+            });
+            }
+            // =========== EJERCICIOS ADICIONALES ===========
+            // PRÁCTICA: Cambiar el título principal (h1)
+            // 1. Buscar el elemento h1
+            // 2. Cambiar su texto a "¡DOM Manipulado!"
+            // 3. Cambiar su color a morado (#8A2BE2)
+            // PRÁCTICA: Contar cuántos divs hay en la página
+            // 1. Buscar todos los divs
+            // 2. Mostrar un alert con el número total
+            // PRÁCTICA: Crear un botón que alerte el texto de todos los párrafos
+            // 1. Buscar todos los párrafos (etiqueta <p>)
+            // 2. Recorrerlos y concatenar sus textos
+            // 3. Mostrar el resultado en un alert
     </script>
   </body>
 </html>
