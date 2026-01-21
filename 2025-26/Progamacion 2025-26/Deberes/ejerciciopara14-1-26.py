@@ -75,3 +75,33 @@ for lletra in cadena:
     minuscula = not minuscula
 
 print(nova_cadena)
+
+# 7
+nombre = int(input('Introduce tu nombre: '))
+i = 1
+while i <= nombre:
+    print(i)
+    i = i + 1
+
+# 8
+capital = float(input("Introdueix el capital inicial: "))
+interes = float(input("Introdueix l'interès anual (%): "))
+anys = int(input("Introdueix el nombre d'anys: "))
+
+for any in range(anys):
+    capital = capital + capital * interes / 100
+
+print("El capital acumulat després de", anys, "anys és:", capital)
+
+# 9
+n = int(input("Introdueix un nombre sencer: "))
+
+suma = 0
+i = 1
+
+while i <= n // 2:
+    if n % i == 0:
+        suma = suma + i
+    i = i + 1
+
+print("La suma dels divisors és:", suma)
