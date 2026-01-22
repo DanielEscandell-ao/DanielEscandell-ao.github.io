@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+      * {
+      box-sizing: border-box;
+      }
+
+      body {
+      background: #111;
+      /*#111111*/
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      }
+
+      #contenedor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 100%;
+      }
+
+      .square {
+      background-color: #1d1d1d;
+      box-shadow: 0 0 2px #000;
+      margin: 2px;
+      width: 36px;
+      height: 36px;
+      transition: 1s ease;
+      }
+
+      .square:hover {
+      transition-duration: 0s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenedor"></div>
+    <script>
+      generarDivs();
+      //const input = document.createElement('input')
+      //input.value ='Insertar div'
+      //input.type = 'button'
+      //input.onclick = 'generarDivs()'
+      //div.appendChild(input)
+      function generarDivs() {
+        //debugger
+        const div = document.getElementById("contenedor");
+        const cantidaddivs = parseInt(prompt("Cuantos divs quieres añadir?"));
+        for (let i = 0; i < cantidaddivs; i++) {
+          const nuevodiv = document.createElement("div");
+          //nuevodiv.textContent = "Contenedor numero" + " " + (i + 1);
+          nuevodiv.addEventListener("mouseenter", () => {
+            nuevodiv.style.backgroundColor = generarColorAleatorio();
+          });
+          nuevodiv.addEventListener("mouseleave", () => {
+            nuevodiv.style.backgroundColor = '#1d1d1d';
+          });
+          div.appendChild(nuevodiv);
+          nuevodiv.classList.add("square");
+        }
+      }
+
+      const cajas = document.querySelectorAll(".prueba");
+      const regexSoloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+      function generarColorAleatorio() {
+        // Generar un color hexadecimal aleatorio
+        const letras = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letras[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function cambiarColor() {
+        // debugger
+        let numero = prompt("A que div quieres cambiar el color?"); // le pedimos al usuario que div quiere cambiar de color
+        if (numero == "") {
+          //si el usuario no ha introducido nada reinicia la funcion
+          alert("No has introducido nada, introduce un numero.");
+          cambiarColor();
+        } else if (regexSoloLetras.test(numero) == true) {
+          // si no luego probamos si ha introducido una letra
+          alert("No has introducido un numero, introduce un numero.");
+          cambiarColor();
+        } else if (numero >= 1 && numero < cajas.length) {
+          // en caso que no lo sea se cambia el color con la funcion generarColorAleatorio
+          let num = numero - 1;
+          cajas[num].style.backgroundColor = generarColorAleatorio();
+        } else {
+          // si no ha introducido una letra miramos si el numero que ha introducido es mayor que el numero de divs
+          alert("No existe ese div, introduce un numero valido.");
+          cambiarColor();
+        }
+      }
+    </script>
+  </body>
+</html>
