@@ -266,6 +266,8 @@
               for (let i = 0; i< caja.length; i++)
               caja[i].addEventListener('mouseenter',() => {
               caja[i].style.display = 'none'
+              caja[i].addEventListener('mouseleave',() => {
+              caja[i].style.display = 'inline-block'
             });
             }
             // =========== EJERCICIOS ADICIONALES ===========

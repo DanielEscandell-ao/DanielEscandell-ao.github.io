@@ -77,11 +77,6 @@ for lletra in cadena:
 print(nova_cadena)
 
 # 7
-nombre = int(input('Introduce tu nombre: '))
-i = 1
-while i <= nombre:
-    print(i)
-    i = i + 1
 
 # 8
 capital = float(input("Introdueix el capital inicial: "))

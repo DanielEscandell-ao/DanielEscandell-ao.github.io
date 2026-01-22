@@ -1,11 +1,17 @@
-n = int(input("Introdueix un nombre sencer: "))
+import math
 
-suma = 0
-i = 1
+num = 2
+numero = int(input('Introduce un numero: '))
+objetivo = 1
+lista = []
+esprimo = True
 
-while i <= n // 2:
-    if n % i == 0:
-        suma = suma + i
-    i = i + 1
-
-print("La suma dels divisors és:", suma)
+while objetivo <= numero:
+    while num <= int(math.sqrt(objetivo) + 1):
+        if objetivo % num == 0:
+            esprimo = False
+            break
+        num += 1
+    
+    objetivo += 1 
+print(lista)
