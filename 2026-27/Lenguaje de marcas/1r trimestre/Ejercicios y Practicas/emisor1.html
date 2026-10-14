@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <fieldset>
+        <legend>Datos personales:</legend>
+      <label for="nombre">Nombre:</label><br />
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        required
+        maxlength="30"
+      /><br />
+      <label for="apellido">Apellidos:</label><br />
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        required
+        maxlength="30"
+      /><br />
+      <label for="fechanacimiento">Fecha de nacimiento:</label><br />
+      <input type="date" name="fechanacimiento" id="fechanacimiento" /><br />
+    </fieldset>
+    <label for="observaciones">Observaciones</label><br />
+    <textarea
+      name="observaciones"
+      id="observaciones"
+      rows="5"
+      cols="6"
+      maxlength="250"
+    ></textarea>
+  </body>
+</html>
