@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <form action="receptor.html" method="get">
+      <fieldset>
+        <fieldset>
+        <legend>Datos personales:</legend>
+        <label for="nombre">Nombre:</label><br />
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          required
+          maxlength="30"
+        /><br />
+        <label for="apellido">Apellidos:</label><br />
+        <input
+          type="text"
+          name="apellido"
+          id="apellido"
+          required
+          maxlength="30"
+        /><br />
+        <label for="fechanacimiento">Fecha de nacimiento:</label><br />
+        <input type="date" name="fechanacimiento" id="fechanacimiento" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Observaciones</legend>
+        <textarea
+          name="observaciones"
+          id="observaciones"
+          rows="5"
+          cols="6"
+          maxlength="250"
+        ></textarea>
+      </fieldset>
+      <button type="reset">Reinicia</button>
+      <button type="submit">Enviar</button>
+      </fieldset>
+    </form>
+    <iframe src="receptor.html" frameborder="0" width="600" height="500"></iframe>
+  </body>
+</html>

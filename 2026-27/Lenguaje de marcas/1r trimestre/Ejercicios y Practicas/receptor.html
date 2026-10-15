@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Resultado del Formulario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        .result-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid #4CAF50;
+        }
+        .data-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .data-label {
+            font-weight: bold;
+            color: #333;
+        }
+        .data-value {
+            color: #666;
+        }
+        .url-info {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Datos Recibidos por GET</h1>
+        <p>Los siguientes datos fueron enviados desde el formulario:</p>
+        
+        <div id="datos-recibidos">
+            <!-- Los datos se mostrarán aquí mediante JavaScript -->
+        </div>
+
+        <div class="url-info">
+            <strong>URL completa con parámetros:</strong><br>
+            <span id="url-completa"></span>
+        </div>
+
+        <a href="emisor1.html" class="back-button">Volver al Formulario</a>
+    </div>
+
+    <script>
+        // Función para obtener los parámetros de la URL
+        function obtenerParametrosURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const datos = {};
+            
+            // Obtener todos los parámetros
+            for (const [key, value] of urlParams.entries()) {
+                if (key === 'intereses') {
+                    if (!datos[key]) {
+                        datos[key] = [];
+                    }
+                    datos[key].push(value);
+                } else {
+                    datos[key] = value;
+                }
+            }
+            
+            return datos;
+        }
+
+        // Función para mostrar los datos en la página
+        function mostrarDatos() {
+            const datos = obtenerParametrosURL();
+            const contenedor = document.getElementById('datos-recibidos');
+            const urlCompleta = document.getElementById('url-completa');
+            
+            // Mostrar URL completa
+            urlCompleta.textContent = window.location.href;
+            
+            let html = '';
+            
+            for (const [key, value] of Object.entries(datos)) {
+                let valorMostrar = value;
+                
+                if (Array.isArray(value)) {
+                    valorMostrar = value.join(', ');
+                } else if (value === '') {
+                    valorMostrar = '<em>No especificado</em>';
+                }
+                
+                html += `
+                    <div class="data-item">
+                        <span class="data-label">${key}:</span>
+                        <span class="data-value"> ${valorMostrar}</span>
+                    </div>
+                `;
+            }
+            
+            contenedor.innerHTML = html;
+        }
+
+        // Ejecutar cuando se cargue la página
+        document.addEventListener('DOMContentLoaded', mostrarDatos);
+    </script>
+</body>
+</html>
