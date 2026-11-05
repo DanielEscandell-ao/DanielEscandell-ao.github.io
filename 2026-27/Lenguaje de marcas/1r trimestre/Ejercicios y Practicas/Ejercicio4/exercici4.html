@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        iframe{
+            position: absolute; 
+            margin: auto;
+            top: 100px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            height: 50%;
+            border: 1px solid black;
+        }
+        h2 {
+            color: orangered;
+            text-shadow: 6px -2px 4px orangered;
+        }
+        #primerdiv {
+            height: 25vh;
+            width: 100%;
+            text-align: center;
+        }
+        #segundodiv {
+            height: 60vh;
+            width: 100%;
+        }
+        #tercerdiv {
+            height: 15vh;
+            width: 100%;
+            text-align: center;
+        }
+        .divsinteriores1 {
+            width: 25%;
+            height: 100%;
+            position: relative;
+            float: left;
+        }
+        .divsinteriores2 {
+            width: 25%;
+            height: 99.5%;
+            position: relative;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="primerdiv">
+        <h2>Portafolio: Daniel Escandell Garcia</h2>
+        <img src="https://lh3.googleusercontent.com/a/ACg8ocIDSRaNeubpnuTpaCyDz35FdPWvjn7vnsLrKFBwVg6bWhMmjPfo=s192-c-mo" alt="" width="50px" height="50px">
+    </div>
+    <div id="segundodiv">
+        <div class="divsinteriores1">
+            <h4>Ejercicios</h4>
+            <ul>
+                <li><a href="exercici1.html" target="iframe_a">Ejercicio 1</a></li>
+                <li><a href="emisor1.html" target="iframe_a">Ejercicio 2</a></li>
+                <li><a href="emisor2.html" target="iframe_a">Ejercicio 2</a></li>
+                <li><a href="emisor3.html" target="iframe_a">Ejercicio 2</a></li>
+                <li><a href="iframes.html" target="iframe_a">Ejercicio 3</a></li>
+                <li><a href="exercici4.html" target="iframe_a">Ejercicio 4</a></li>
+                <li><a href="uebung.html" target="iframe_a">Practica Erasmus</a></li>
+                <li><a href="exercici5.html" target="iframe_a">Ejercicio 5</a></li>
+            </ul>
+        </div>
+        <div>
+            <iframe src="" frameborder="0" name='iframe_a'></iframe>
+        </div>
+        <div class="divsinteriores2">
+            <h4>Practicas</h4>
+        </div>
+    </div>
+    <div id="tercerdiv"><p>IES Santa Maria - DAW1 - 26/27
+</p></div>
+</body>
+</html>

@@ -133,6 +133,17 @@ i -= 2
 while i > 0:
     print('* ' * i)
     i -=1
+
+num = int(input('Introduce un numero: '))
+i = num + (num - 1)
+j = 1
+while i > 0:
+    print('* ' * j)
+    if i > num:
+        j += 1
+    else:
+        j -= 1
+    i -= 1 
 # 12 Escriu un programa que donat un nombre sencer introduït per teclat imprimeixi tots els nombres primers des del número 1 
 # fins a aquest nombre. 
 '''
